@@ -9,7 +9,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-950 via-pink-900 to-rose-900">
+    <div className="min-h-screen bg-gradient-to-b from-red-950 via-pink-900 to-rose-950">
       <Header />
       <div className="flex justify-center items-center">
         <div className="mt-10">
