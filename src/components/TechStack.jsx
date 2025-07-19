@@ -30,10 +30,6 @@ const TechStack = [
     title: "CSS",
   },
   {
-    icon: <FaSquareJs />,
-    title: "JavaScript",
-  },
-  {
     icon: <FaReact />,
     title: "ReactJs",
   },
@@ -52,11 +48,7 @@ const TechStack = [
   {
     icon: <SiExpress />,
     title: "Express",
-  },
-  {
-    icon: <SiMongodb />,
-    title: "MongoDB",
-  },
+  }
 ];
 
 const ToolsStack = [

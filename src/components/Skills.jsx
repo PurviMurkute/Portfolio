@@ -3,7 +3,7 @@ import SkillsCard from "./SkillsCard";
 
 const Skills = () => {
   return (
-    <div className="bg-gradient-to-b from-red-950 via-pink-900 to-rose-950 flex flex-col justify-center items-center p-10">
+    <div id="skills" className="bg-gradient-to-b from-black via-gray-950 to-gray-900 flex flex-col justify-center items-center p-10">
       <div className="w-[60%]">
         <h1 className="font-extrabold text-4xl text-center text-pink-300">
           Skills & Technologies
@@ -20,7 +20,7 @@ const Skills = () => {
             {TechStack.map((tech, i) => {
               const { icon, title } = tech;
 
-              return <SkillsCard icon={icon} title={title} />;
+              return <SkillsCard key={i} icon={icon} title={title} />;
             })}
           </div>
           <h3 className="font-bold text-white text-xl my-5">
@@ -51,6 +51,7 @@ const Skills = () => {
               return <SkillsCard icon={icon} title={title} />;
             })}
           </div>
+          <p className="text-gray-300 py-3">Tech keeps evolving, and so do I - staying curious, experimenting, and enjoying every bit of it!</p>
         </div>
       </div>
     </div>

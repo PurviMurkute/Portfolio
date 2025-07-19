@@ -1,20 +1,19 @@
 import photo from "./../assets/photo.png";
-import github from "./../assets/github.png";
 import linkedin from "./../assets/linkedin.png";
 import peerlist from "./../assets/peerlist.png";
-import { Sparkle } from "lucide-react";
 import Header from "./Header";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router";
+import { FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-950 via-pink-900 to-rose-950">
+    <div id="home" className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900">
       <Header />
-      <div className="flex justify-center items-center">
-        <div className="mt-10">
-          <h1 className="text-5xl font-extrabold text-white">Hello!</h1>
-          <h2 className="text-5xl font-extrabold text-white mb-4">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 min-h-screen">
+        <div className="mt-15">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white">Hello!</h1>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
             I am{" "}
             <span className="bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 inline-block text-transparent bg-clip-text">
               Purvi Murkute,
@@ -33,22 +32,18 @@ const Hero = () => {
             ]}
             wrapper="h3"
             repeat={Infinity}
-            className="text-3xl text-white"
+            className="text-2xl md:text-3xl text-white"
           />
           <p className="text-gray-400 w-[350px] my-3 font-medium">
             Full Stack Developer driven by the challenge of building seamless,
             scalable web experiences. I enjoy turning ideas into reliable
             systems that not only work flawlessly but feel intuitive. From clean
-            UI flow to solid backend logic — I bring it all together with
+            UI flow to solid backend logic - I bring it all together with
             clarity and purpose.
           </p>
           <div className="flex gap-2 my-3">
             <Link to="https://github.com/PurviMurkute">
-              <img
-                src={github}
-                alt="icon"
-                className="w-[50px] p-2 rounded-full border-1 border-pink-500 "
-              />
+              <FaGithub className="w-[50px] h-[50px] text-white p-2 rounded-full border-1 border-pink-500" />
             </Link>
             <Link to="https://www.linkedin.com/in/purvi-murkute-72b914234/">
               <img
@@ -65,13 +60,31 @@ const Hero = () => {
               />
             </Link>
           </div>
+          <div className="flex gap-3">
+          <button
+            onClick={() => {
+              window.open("/resume.pdf", "_blank");
+            }}
+            className="text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer"
+          >
+            Resume
+          </button>
+          <Link to='/#contact'>
+          <button
+            className="text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer"
+          >
+            Let's Connect
+          </button>
+          </Link>
+          </div>
         </div>
         <div>
-          <div>
+          <div className="mt-15">
             <img
               src={photo}
-              alt=""
-              className="object-cover min-h-screen w-[450px]"
+              alt="profile"
+              className="object-cover rounded-full h-[400px] w-[400px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
+              style={{boxShadow: '0px 0px 10px 1px #ff80bf'}}
             />
           </div>
         </div>
