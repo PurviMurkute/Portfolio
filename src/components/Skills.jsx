@@ -1,4 +1,4 @@
-import { DataBase, Languages, TechStack, ToolsStack } from "./TechStack";
+import { DataBase, Languages, TechStack, ToolsStack } from "./TechStackConfig";
 import SkillsCard from "./SkillsCard";
 
 const Skills = () => {

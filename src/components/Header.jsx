@@ -33,7 +33,7 @@ const Header = () => {
           <Link to="#home">
             <h3 className="text-white font-bold text-2xl">Purvi ❤️</h3>
           </Link>
-          <IoMdMenu className="text-white fixed right-5 top-4 text-3xl" onClick={toggleMenu}/>
+          <IoMdMenu className="text-white fixed right-5 top-4 text-3xl flex md:hidden" onClick={toggleMenu}/>
           <div className="hidden md:flex justify-evenly text-white font-bold gap-5 pt-1">
             <ScrollHandler />
             <a href="#home" className="cursor-pointer">
