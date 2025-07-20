@@ -1,15 +1,13 @@
 import photo from "./../assets/photo.png";
 import linkedin from "./../assets/linkedin.png";
 import peerlist from "./../assets/peerlist.png";
-import Header from "./Header";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
 
-const Hero = () => {
+const Home = () => {
   return (
     <div id="home" className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900">
-      <Header />
       <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 min-h-screen">
         <div className="mt-15">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white">Hello!</h1>
@@ -93,4 +91,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
