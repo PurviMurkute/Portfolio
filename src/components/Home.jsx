@@ -8,8 +8,8 @@ import { FaGithub } from "react-icons/fa";
 const Home = () => {
   return (
     <div id="home" className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900">
-      <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 min-h-screen">
-        <div className="mt-15">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 min-h-screen px-5">
+        <div className="mt-20 md:mt-15">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white">Hello!</h1>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
             I am{" "}
@@ -32,7 +32,7 @@ const Home = () => {
             repeat={Infinity}
             className="text-2xl md:text-3xl text-white"
           />
-          <p className="text-gray-400 w-[350px] my-3 font-medium">
+          <p className="text-gray-400 md:w-[350px] my-3 font-medium">
             Full Stack Developer driven by the challenge of building seamless,
             scalable web experiences. I enjoy turning ideas into reliable
             systems that not only work flawlessly but feel intuitive. From clean
@@ -58,18 +58,18 @@ const Home = () => {
               />
             </Link>
           </div>
-          <div className="flex gap-3">
+          <div className="flex justify-center md:block gap-3">
           <button
             onClick={() => {
               window.open("/resume.pdf", "_blank");
             }}
-            className="text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer"
+            className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 md:me-2 border-1 border-pink-300 shadow-2xl cursor-pointer"
           >
             Resume
           </button>
           <Link to='/#contact'>
           <button
-            className="text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer"
+            className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer"
           >
             Let's Connect
           </button>
@@ -77,11 +77,11 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="mt-15">
+          <div className="my-5 md:mt-15">
             <img
               src={photo}
               alt="profile"
-              className="object-cover rounded-full h-[400px] w-[400px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
+              className="object-cover rounded-full h-[280px] w-[270px] md:h-[400px] md:w-[400px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
               style={{boxShadow: '0px 0px 10px 1px #ff80bf'}}
             />
           </div>

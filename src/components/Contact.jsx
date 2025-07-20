@@ -36,10 +36,10 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="bg-gradient-to-b from-black via-gray-950 to-gray-900 shadow-2xl flex flex-col justify-center items-center p-10"
+      className="bg-gradient-to-b from-black via-gray-950 to-gray-900 shadow-2xl flex flex-col justify-center items-center p-5 md:p-10"
     >
-      <h1 className="text-3xl text-pink-300 font-extrabold">Let's Connect</h1>
-      <p className="text-gray-300 text-center my-3 w-[550px]">
+      <h1 className="text-2xl md:text-4xl text-pink-300 font-extrabold">Let's Connect</h1>
+      <p className="text-gray-300 text-center my-3 md:w-[550px]">
         Have a project in mind or just want to say hello? I'm always open to
         meaningful conversations, collaborations, or new opportunities. Let's
         connect and build something great together!
@@ -47,7 +47,7 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={handleSubmit}
-        className="py-5 px-8 border-1 border-pink-300 rounded-2xl my-5 flex flex-col w-[500px] bg-black"
+        className="py-5 px-4 md:px-8 border-1 border-pink-300 rounded-2xl my-5 flex flex-col w-[300px] md:w-[500px] bg-black"
       >
         <input
           type="text"
