@@ -30,12 +30,12 @@ const ProjectCard = ({
       </div>
       <div className="my-2 md:my-4 flex justify-between">
         <Link to={demoLink}>
-          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-500 text-white font-medium">
+          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-500 text-white font-medium cursor-pointer hover:bg-gray-600">
             Live Demo
           </button>
         </Link>
         <Link to={githubRepo}>
-          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-500 text-white font-medium">
+          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-500 text-white font-medium cursor-pointer hover:bg-gray-600">
             Source Code
           </button>
         </Link>
