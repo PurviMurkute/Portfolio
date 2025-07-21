@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-500 rounded-full shadow-lg my-2">
+      <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-500 bg-gray-800/50 rounded-full shadow-lg my-3">
         <div className="flex justify-between px-5 py-2">
           <Link to="#home">
             <h3 className="text-white font-bold text-2xl">Purvi ❤️</h3>
@@ -36,16 +36,16 @@ const Header = () => {
           <IoMdMenu className="text-white fixed right-5 top-4 text-3xl flex md:hidden" onClick={toggleMenu}/>
           <div className="hidden md:flex justify-evenly text-white font-bold gap-5 pt-1">
             <ScrollHandler />
-            <a href="#home" className="cursor-pointer">
+            <a href="#home" className="cursor-pointer hover:text-pink-500">
               Home
             </a>
-            <a href="#skills" className="cursor-pointer">
+            <a href="#skills" className="cursor-pointer hover:text-pink-500">
               Skills
             </a>
-            <a href="#projects" className="cursor-pointer">
+            <a href="#projects" className="cursor-pointer hover:text-pink-500">
               Pojects
             </a>
-            <a href="#contact" className="cursor-pointer">
+            <a href="#contact" className="cursor-pointer hover:text-pink-500">
               Contact
             </a>
           </div>

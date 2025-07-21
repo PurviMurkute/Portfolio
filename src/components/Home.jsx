@@ -4,13 +4,27 @@ import peerlist from "./../assets/peerlist.png";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router";
 import { FaGithub } from "react-icons/fa";
+import { motion, useScroll } from "motion/react";
 
 const Home = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
-    <div id="home" className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900">
+    <div
+      id="home"
+      className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900"
+    >
+      <motion.div
+        style={{
+          scaleX: scrollYProgress,
+        }}
+        className="w-full h-3 bg-pink-600 fixed top-0 left-0"
+      ></motion.div>
       <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 min-h-screen px-5">
         <div className="mt-20 md:mt-15">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white">Hello!</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+            Hello!
+          </h1>
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
             I am{" "}
             <span className="bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 inline-block text-transparent bg-clip-text">
@@ -32,7 +46,7 @@ const Home = () => {
             repeat={Infinity}
             className="text-2xl md:text-3xl text-white"
           />
-          <p className="text-gray-400 md:w-[350px] my-3 font-medium">
+          <p className="text-gray-400 md:w-[450px] my-3 font-medium">
             Full Stack Developer driven by the challenge of building seamless,
             scalable web experiences. I enjoy turning ideas into reliable
             systems that not only work flawlessly but feel intuitive. From clean
@@ -59,21 +73,19 @@ const Home = () => {
             </Link>
           </div>
           <div className="flex justify-center md:block gap-3">
-          <button
-            onClick={() => {
-              window.open("/resume.pdf", "_blank");
-            }}
-            className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 md:me-2 border-1 border-pink-300 shadow-2xl cursor-pointer"
-          >
-            Resume
-          </button>
-          <Link to='/#contact'>
-          <button
-            className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer"
-          >
-            Let's Connect
-          </button>
-          </Link>
+            <button
+              onClick={() => {
+                window.open("/resume.pdf", "_blank");
+              }}
+              className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 md:me-2 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200"
+            >
+              Resume
+            </button>
+            <Link to="/#contact">
+              <button className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200">
+                Let's Connect
+              </button>
+            </Link>
           </div>
         </div>
         <div>
@@ -81,8 +93,8 @@ const Home = () => {
             <img
               src={photo}
               alt="profile"
-              className="object-cover rounded-full h-[280px] w-[270px] md:h-[400px] md:w-[400px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
-              style={{boxShadow: '0px 0px 10px 1px #ff80bf'}}
+              className="object-cover rounded-full h-[290px] w-[270px] md:h-[400px] md:w-[400px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
+              style={{ boxShadow: "0px 0px 10px 1px #ff80bf" }}
             />
           </div>
         </div>

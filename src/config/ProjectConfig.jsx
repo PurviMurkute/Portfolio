@@ -8,8 +8,8 @@ const projectDetails = [
         githubRepo: "https://github.com/PurviMurkute/ExpenseTracker"
     },
     {
-        title: "Gemini Clone",
-        img: "./project1img.png",
+        title: "Askly",
+        img: "./project2.png",
         description: "Built an AI chat app where users can sign in with Google and have real-time conversations with an intelligent assistant. Designed to provide a smooth and user-friendly experience similar to Google Gemini.",
         techStack: ["React.js", "Node.js", "Express", "Gemini API", "Google OAuth", "TailwindCSS"],
         demoLink: "https://gemini-clone-m12g.onrender.com",

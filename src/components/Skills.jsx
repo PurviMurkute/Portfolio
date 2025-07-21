@@ -4,7 +4,7 @@ import SkillsCard from "./SkillsCard";
 const Skills = () => {
   return (
     <div id="skills" className="bg-gradient-to-b from-black via-gray-950 to-gray-900 flex flex-col justify-center items-center p-10">
-      <div className="md:w-[60%]">
+      <div className="md:w-[70%]">
         <h1 className="font-extrabold text-2xl md:text-4xl text-center text-pink-300">
           Skills & Technologies
         </h1>
@@ -30,7 +30,7 @@ const Skills = () => {
             {ToolsStack.map((tech, i) => {
               const { icon, title } = tech;
 
-              return <SkillsCard icon={icon} title={title} />;
+              return <SkillsCard key={i} icon={icon} title={title} />;
             })}
           </div>
           <h3 className="font-bold text-white text-xl md:text-2xl py-4">Databases</h3>
@@ -38,7 +38,7 @@ const Skills = () => {
             {DataBase.map((tech, i) => {
               const { icon, title } = tech;
 
-              return <SkillsCard icon={icon} title={title} />;
+              return <SkillsCard key={i} icon={icon} title={title} />;
             })}
           </div>
           <h3 className="font-bold text-white text-xl md:text-2xl py-4">
@@ -48,7 +48,7 @@ const Skills = () => {
             {Languages.map((tech, i) => {
               const { icon, title } = tech;
 
-              return <SkillsCard icon={icon} title={title} />;
+              return <SkillsCard key={i} icon={icon} title={title} />;
             })}
           </div>
           <p className="text-gray-300 py-3">Tech keeps evolving, and so do I - staying curious, experimenting, and enjoying every bit of it!</p>
