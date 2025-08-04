@@ -31,7 +31,7 @@ const Header = () => {
       <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-500 bg-gray-800/50 rounded-full shadow-lg my-3">
         <div className="flex justify-between px-5 py-2">
           <Link to="#home">
-            <h3 className="text-white font-bold text-2xl">Purvi ❤️</h3>
+            <h3 className="text-white font-bold text-2xl">Purvi</h3>
           </Link>
           <IoMdMenu className="text-white fixed right-5 top-4 text-3xl flex md:hidden" onClick={toggleMenu}/>
           <div className="hidden md:flex justify-evenly text-white font-bold gap-5 pt-1">

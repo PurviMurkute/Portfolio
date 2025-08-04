@@ -57,7 +57,7 @@ const Home = () => {
             <Link to="https://github.com/PurviMurkute">
               <FaGithub className="w-[50px] h-[50px] text-white p-2 rounded-full border-1 border-pink-500" />
             </Link>
-            <Link to="https://www.linkedin.com/in/purvi-murkute-72b914234/">
+            <Link to="https://www.linkedin.com/in/PurviMurkute">
               <img
                 src={linkedin}
                 alt="icon"
