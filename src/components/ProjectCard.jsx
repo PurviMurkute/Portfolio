@@ -34,12 +34,12 @@ const ProjectCard = ({
       </div>
       <div className="my-2 md:my-4 flex justify-between">
         <a href={demoLink} target="_blank" rel="noopener noreferrer">
-          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-500 text-white font-medium cursor-pointer hover:bg-gray-600">
+          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-600 text-white font-medium cursor-pointer hover:bg-gray-700">
             Live Demo
           </button>
         </a>
         <a href={githubRepo} target="_blank" rel="noopener noreferrer">
-          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-500 text-white font-medium cursor-pointer hover:bg-gray-600">Source Code</button>
+          <button className="px-3 py-1 w-[130px] md:w-[220px] rounded-md bg-gray-600 text-white font-medium cursor-pointer hover:bg-gray-700">Source Code</button>
         </a>
       </div>
     </div>
