@@ -31,13 +31,12 @@ jobs:
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: "ap-south-1"
 
-      - name: Push to S3
-        run: |
-          # First sync non-JS/CSS files
-          aws s3 sync ./dist s3://purvimurkute.in --delete --exclude "*.js" --exclude "*.css"
+      - name: Upload all non-JS/CSS files
+        run: aws s3 sync ./dist s3://purvimurkute.in --delete --exact-timestamps --exclude "*.js" --exclude "*.css"
 
-          # Then sync JS files with correct content type
-          aws s3 sync ./dist s3://purvimurkute.in --include "*.js" --content-type "application/javascript"
+      - name: Upload JS files with correct Content-Type
+        run: aws s3 sync ./dist s3://purvimurkute.in --exact-timestamps --exclude "*" --include "*.js" --content-type "application/javascript"
 
-          # Then sync CSS files with correct content type
-          aws s3 sync ./dist s3://purvimurkute.in --include "*.css" --content-type "text/css"
+      - name: Upload CSS files with correct Content-Type
+        run: aws s3 sync ./dist s3://purvimurkute.in --exact-timestamps --exclude "*" --include "*.css" --content-type "text/css"
+
