@@ -32,7 +32,7 @@ jobs:
           aws-region: "ap-south-1"
 
       - name: Upload all non-JS/CSS files
-        run: aws s3 sync ./dist s3://purvimurkute.in --delete --exact-timestamps --exclude "*.js" --exclude "*.css"
+        run: aws s3 sync ./dist s3://purvi-murkute-portfolio --delete --exact-timestamps --exclude "*.js" --exclude "*.css"
 
       - name: Upload JS files with correct Content-Type
         run: aws s3 sync ./dist s3://purvimurkute.in --exact-timestamps --exclude "*" --include "*.js" --content-type "application/javascript"
