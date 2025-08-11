@@ -34,10 +34,10 @@ jobs:
       - name: Push to S3
         run: |
           # First sync non-JS/CSS files
-          aws s3 sync ./dist s3://purvimurkute.in --delete --exclude "*.js" --exclude "*.css"
+          aws s3 sync ./dist s3://purvi-murkute-portfolio --delete --exclude "*.js" --exclude "*.css"
 
           # Then sync JS files with correct content type
-          aws s3 sync ./dist s3://purvimurkute.in --include "*.js" --content-type "application/javascript"
+          aws s3 sync ./dist s3://purvi-murkute-portfolio --include "*.js" --content-type "application/javascript"
 
           # Then sync CSS files with correct content type
-          aws s3 sync ./dist s3://purvimurkute.in --include "*.css" --content-type "text/css"
+          aws s3 sync ./dist s3://purvi-murkute-portfolio --include "*.css" --content-type "text/css"
