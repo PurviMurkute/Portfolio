@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-500 bg-gray-800/50 rounded-full shadow-lg my-3">
+      <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-200 bg-gray-800/50 rounded-full shadow-lg my-3">
         <div className="flex justify-between px-5 py-2">
           <Link
             to="home"
@@ -28,7 +28,7 @@ const Header = () => {
           </Link>
 
           <IoMdMenu
-            className="text-white fixed right-6 top-5.5 text-3xl flex md:hidden"
+            className="text-white fixed right-6 top-5.5 text-3xl cursor-pointer flex md:hidden"
             onClick={toggleMenu}
           />
           <div className="hidden md:flex justify-evenly text-white font-bold gap-5 pt-1">
@@ -36,7 +36,7 @@ const Header = () => {
               to="home"
               smooth={true}
               duration={200}
-              className="cursor-pointer hover:text-pink-500"
+              className="cursor-pointer hover:text-pink-200"
             >
               Home
             </Link>
@@ -44,7 +44,7 @@ const Header = () => {
               to="skills"
               smooth={true}
               duration={200}
-              className="cursor-pointer hover:text-pink-500"
+              className="cursor-pointer hover:text-pink-200"
             >
               Skills
             </Link>
@@ -52,7 +52,7 @@ const Header = () => {
               to="projects"
               smooth={true}
               duration={200}
-              className="cursor-pointer hover:text-pink-500"
+              className="cursor-pointer hover:text-pink-200"
             >
               Projects
             </Link>
@@ -60,7 +60,7 @@ const Header = () => {
               to="contact"
               smooth={true}
               duration={200}
-              className="cursor-pointer hover:text-pink-500"
+              className="cursor-pointer hover:text-pink-200"
             >
               Contact
             </Link>
@@ -75,7 +75,7 @@ const Header = () => {
         {isMenuOpen ? (
           <RxCross2
             onClick={toggleMenu}
-            className="fixed right-4 top-3 text-2xl"
+            className="fixed right-4 top-3 text-2xl cursor-pointer"
           />
         ) : null}
         <Link

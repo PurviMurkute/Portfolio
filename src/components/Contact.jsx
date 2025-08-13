@@ -35,7 +35,7 @@ const Contact = () => {
 
   return (
     <div
-      id="contact"
+      name="contact"
       className="bg-gradient-to-b from-black via-gray-950 to-gray-900 shadow-2xl flex flex-col justify-center items-center p-5 md:p-10"
     >
       <h1 className="text-2xl md:text-4xl text-pink-300 font-extrabold">Let's Connect</h1>

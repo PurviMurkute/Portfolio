@@ -2,7 +2,7 @@ import photo from "./../assets/photo.png";
 import linkedin from "./../assets/linkedin.png";
 import peerlist from "./../assets/peerlist.png";
 import { TypeAnimation } from "react-type-animation";
-import { Link } from "react-router";
+import { Link } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
 import { motion, useScroll } from "motion/react";
 
@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div
-      id="home"
+      name="home"
       className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900"
     >
       <motion.div
@@ -20,8 +20,8 @@ const Home = () => {
         }}
         className="w-full h-3 bg-pink-600 fixed top-0 left-0"
       ></motion.div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 min-h-screen px-5">
-        <div className="mt-20 md:mt-15">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-15 min-h-screen px-5">
+        <div className="mt-20 md:mt-15 p-2">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white">
             Hello!
           </h1>
@@ -54,7 +54,11 @@ const Home = () => {
             clarity and purpose.
           </p>
           <div className="flex gap-2 my-3">
-            <Link to="https://github.com/PurviMurkute">
+            <Link
+              to="https://github.com/PurviMurkute"
+              smooth={true}
+              duration={200}
+            >
               <FaGithub className="w-[50px] h-[50px] text-white p-2 rounded-full border-1 border-pink-500" />
             </Link>
             <Link to="https://www.linkedin.com/in/PurviMurkute">
@@ -72,7 +76,7 @@ const Home = () => {
               />
             </Link>
           </div>
-          <div className="flex justify-center md:block gap-3">
+          <div className="flex justify-start md:block gap-3">
             <button
               onClick={() => {
                 window.open("/resume.pdf", "_blank");
@@ -81,7 +85,7 @@ const Home = () => {
             >
               Resume
             </button>
-            <Link to="/#contact">
+            <Link to="contact">
               <button className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200">
                 Let's Connect
               </button>

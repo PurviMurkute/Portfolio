@@ -4,7 +4,7 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   return (
     <div
-      id="projects"
+      name="projects"
       className="bg-gradient-to-b from-black via-gray-950 to-gray-900 flex flex-col justify-center items-center p-10"
     >
       <h1 className="text-2xl md:text-4xl font-extrabold text-pink-300">Projects</h1>
