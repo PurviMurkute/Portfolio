@@ -1,43 +1,45 @@
-name: Deploy To S3
+name: Staging Deployment
+
+env:
+  BUCKET_NAME: purvimurkute-portfolio
+  DISTRIBUTION_ID: E2LWU5AA9MMGIV
+  BUILD_DIR: dist
 
 on:
   push:
     branches:
-      - "*"
+      - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "20"
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install --legacy-peer-deps
 
-      - name: Build Project
-        run: npm run build
+    - name: Build React app
+      run: npm run build:staging
 
-      - name: AWS Credentials Configure
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-          aws-region: "ap-south-1"
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
+        aws-region: ap-south-1
 
-      - name: Push to S3
-        run: |
-          # First sync non-JS/CSS files
-          aws s3 sync ./dist s3://purvimurkute.in --delete --exclude "*.js" --exclude "*.css"
+    - name: Push build to S3 bucket
+      run: |
+        aws s3 sync $BUILD_DIR s3://$BUCKET_NAME --delete
 
-          # Then sync JS files with correct content type
-          aws s3 sync ./dist s3://purvimurkute.in --include "*.js" --content-type "application/javascript"
-
-          # Then sync CSS files with correct content type
-          aws s3 sync ./dist s3://purvimurkute.in --include "*.css" --content-type "text/css"
+    - name: Create CloudFront invalidation
+      run: |
+        aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
