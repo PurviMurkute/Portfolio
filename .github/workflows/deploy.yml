@@ -2,7 +2,7 @@ name: Staging Deployment
 
 env:
   BUCKET_NAME: purvimurkute.in
-  DISTRIBUTION_ID: E3B2WUEYPOR257
+  DISTRIBUTION_ID: E1HJBG8SYAWRA9
   BUILD_DIR: dist
 
 on:

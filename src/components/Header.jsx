@@ -23,7 +23,7 @@ const Header = () => {
           >
             <div className="flex justify-center items-center gap-2">
               <FaCode className="inline text-pink-200 text-2xl" />
-              <h3 className="text-white font-bold text-2xl">Purvi</h3>
+              <h3 className="text-white font-bold text-xl md:text-2xl">Purvi</h3>
             </div>
           </Link>
 
@@ -68,21 +68,24 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`md:hidden text-white font-bold w-[80%] h-screen fixed right-0 px-7  bg-pink-900 ${
-          isMenuOpen ? "flex flex-col gap-5 pt-15 z-10" : "hidden"
+        className={`md:hidden text-white font-bold w-full fixed right-0 px-7 py-4 bg-pink-900/90 transition-all duration-500 ease-in-out transform ${
+          isMenuOpen
+            ? "translate-y-0 opacity-100 flex flex-col justify-center items-center gap-2 pt-10 z-10"
+            : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
         {isMenuOpen ? (
           <RxCross2
             onClick={toggleMenu}
-            className="fixed right-4 top-3 text-2xl cursor-pointer"
+            className="fixed right-4 top-5 text-2xl cursor-pointer"
           />
         ) : null}
+        
         <Link
           to="home"
           smooth={true}
           duration={200}
-          className="cursor-pointer p-3 rounded-md bg-gray-900/40 hover:bg-black transition-all duration-300"
+          className="cursor-pointer p-2 rounded-md w-full text-center hover:bg-black transition-all duration-300"
           onClick={() => setIsMenuOpen(false)}
         >
           Home
@@ -91,7 +94,7 @@ const Header = () => {
           to="skills"
           smooth={true}
           duration={200}
-          className="cursor-pointer p-3 rounded-md bg-gray-900/40 hover:bg-black transition-all duration-300"
+          className="cursor-pointer p-2 rounded-md w-full text-center hover:bg-black transition-all duration-300"
           onClick={() => setIsMenuOpen(false)}
         >
           Skills
@@ -100,7 +103,7 @@ const Header = () => {
           to="projects"
           smooth={true}
           duration={200}
-          className="cursor-pointer p-3 rounded-md bg-gray-900/40 hover:bg-black transition-all duration-300"
+          className="cursor-pointer p-2 rounded-md w-full text-center hover:bg-black transition-all duration-300"
           onClick={() => setIsMenuOpen(false)}
         >
           Projects
@@ -109,7 +112,7 @@ const Header = () => {
           to="contact"
           smooth={true}
           duration={200}
-          className="cursor-pointer p-3 rounded-md bg-gray-900/40 hover:bg-black transition-all duration-300"
+          className="cursor-pointer p-2 rounded-md w-full text-center hover:bg-black transition-all duration-300"
           onClick={() => setIsMenuOpen(false)}
         >
           Contact

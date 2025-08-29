@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="min-h-screen bg-gradient-to-b from-black via-gray-950 to-gray-900"
+      className="md:h-[670px] bg-gradient-to-b from-black via-gray-950 to-gray-900"
     >
       <motion.div
         style={{
@@ -21,7 +21,7 @@ const Home = () => {
         className="w-full h-3 bg-pink-600 fixed top-0 left-0"
       ></motion.div>
       <div className="flex flex-col md:flex-row justify-center items-center md:gap-15 min-h-screen px-5">
-        <div className="mt-20 md:mt-15 p-2">
+        <div className="mt-20 md:mt-5 p-2">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white">
             Hello!
           </h1>
@@ -93,7 +93,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="my-5 md:mt-15">
+          <div className="my-5 md:mt-5">
             <img
               src={photo}
               alt="profile"
