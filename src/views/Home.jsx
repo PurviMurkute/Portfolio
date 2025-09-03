@@ -1,6 +1,6 @@
-import photo from "./../assets/photo.png";
-import linkedin from "./../assets/linkedin.png";
-import peerlist from "./../assets/peerlist.png";
+import photo from "../assets/photo.png";
+import linkedin from "../assets/linkedin.png";
+import peerlist from "../assets/peerlist.png";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-scroll";
 import { FaGithub } from "react-icons/fa";
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className="md:h-[670px] bg-gradient-to-b from-black via-gray-950 to-gray-900"
+      className="md:min-h-screen bg-gradient-to-b from-white via-slate-100 to-slate-200"
     >
       <motion.div
         style={{
@@ -20,12 +20,12 @@ const Home = () => {
         }}
         className="w-full h-3 bg-pink-600 fixed top-0 left-0"
       ></motion.div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:gap-15 min-h-screen px-5">
+      <div className="flex flex-col md:flex-row justify-center items-center md:gap-22 min-h-screen px-5">
         <div className="mt-20 md:mt-5 p-2">
-          <h1 className="text-3xl md:text-5xl font-extrabold text-white">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-black">
             Hello!
           </h1>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-black mb-4">
             I am{" "}
             <span className="bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 inline-block text-transparent bg-clip-text">
               Purvi Murkute,
@@ -44,9 +44,9 @@ const Home = () => {
             ]}
             wrapper="h3"
             repeat={Infinity}
-            className="text-2xl md:text-3xl text-white"
+            className="text-2xl md:text-3xl text-black"
           />
-          <p className="text-gray-400 md:w-[450px] my-3 font-medium">
+          <p className="text-gray-500 md:w-[450px] my-3 font-medium">
             Full Stack Developer driven by the challenge of building seamless,
             scalable web experiences. I enjoy turning ideas into reliable
             systems that not only work flawlessly but feel intuitive. From clean
@@ -54,39 +54,47 @@ const Home = () => {
             clarity and purpose.
           </p>
           <div className="flex gap-2 my-3">
-            <Link
-              to="https://github.com/PurviMurkute"
-              smooth={true}
-              duration={200}
+            <a
+              href="https://github.com/PurviMurkute"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaGithub className="w-[50px] h-[50px] text-white p-2 rounded-full border-1 border-pink-500" />
-            </Link>
-            <Link to="https://www.linkedin.com/in/PurviMurkute">
+              <FaGithub className="w-[50px] h-[50px] text-black p-2 rounded-full border-1 border-pink-500" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/purvimurkute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={linkedin}
                 alt="icon"
                 className="w-[50px] p-2 rounded-full border-1 border-pink-500 "
               />
-            </Link>
-            <Link to="https://peerlist.io/purvimurkute">
+            </a>
+            <a
+              href="https://peerlist.io/purvimurkute"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={peerlist}
                 alt="icon"
                 className="w-[50px] p-2 rounded-full border-1 border-pink-500 "
               />
-            </Link>
+            </a>
           </div>
           <div className="flex justify-start md:block gap-3">
             <button
               onClick={() => {
                 window.open("/resume.pdf", "_blank");
               }}
-              className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 md:me-2 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200"
+              className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-orange-900 font-bold px-6 py-2 rounded-full my-3 md:me-2 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200"
             >
               Resume
             </button>
             <Link to="contact">
-              <button className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-transparent font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200">
+              <button className="text-md md:text-xl text-pink-100 bg-gradient-to-b from-orange-950 to-orange-900 font-bold px-6 py-2 rounded-full my-3 border-1 border-pink-300 shadow-2xl cursor-pointer hover:scale-95 transition-transform duration-200">
                 Let's Connect
               </button>
             </Link>

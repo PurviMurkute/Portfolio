@@ -1,16 +1,16 @@
 import { projectDetails } from "../config/ProjectConfig";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-black via-gray-950 to-gray-900 flex flex-col justify-center items-center p-10"
+      className="bg-gradient-to-b from-white via-slate-100 to-slate-200 flex flex-col justify-center items-center p-10"
     >
-      <h1 className="text-2xl md:text-4xl font-extrabold text-pink-300">Projects</h1>
+      <h1 className="text-2xl md:text-4xl font-extrabold text-pink-500">Projects</h1>
       <div className="flex flex-col md:flex-row gap-5 flex-wrap my-5">
         {projectDetails.map((project, i) => {
-          const { title, img, description, techStack, demoLink, githubRepo } =
+          const { title, img, description, techStack, features, demoLink, githubRepo } =
             project;
 
           return (
@@ -19,6 +19,7 @@ const Projects = () => {
               title={title}
               img={img}
               description={description}
+              features={features}
               techStack={techStack}
               demoLink={demoLink}
               githubRepo={githubRepo}

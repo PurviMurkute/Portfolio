@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-200 bg-gray-800/50 rounded-full shadow-lg my-3">
+      <div className="fixed top-0 w-[95%] md:w-2/3 border-1 border-pink-200 bg-gray-900/70 rounded-full shadow-lg my-3">
         <div className="flex justify-between px-5 py-2">
           <Link
             to="home"
@@ -70,14 +70,14 @@ const Header = () => {
       <div
         className={`md:hidden text-white font-bold w-full fixed right-0 px-7 py-4 bg-pink-900/90 transition-all duration-500 ease-in-out transform ${
           isMenuOpen
-            ? "translate-y-0 opacity-100 flex flex-col justify-center items-center gap-2 pt-10 z-10"
+            ? "translate-y-0 opacity-100 flex flex-col justify-center items-center gap-2 pt-13 z-10"
             : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
         {isMenuOpen ? (
           <RxCross2
             onClick={toggleMenu}
-            className="fixed right-4 top-5 text-2xl cursor-pointer"
+            className="fixed right-5 top-6 text-2xl cursor-pointer"
           />
         ) : null}
         

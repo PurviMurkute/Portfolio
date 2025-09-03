@@ -12,6 +12,10 @@ const Contact = () => {
     e.preventDefault();
 
     try {
+      if(!name || !email || !message) {
+        toast.error("All fields are required");
+        return;
+      }
       await emailjs.sendForm(
         "service_7ee1kko",
         "template_bopk1yt",
@@ -27,7 +31,7 @@ const Contact = () => {
         setMessage("");
 
         form.current.reset();
-      }, 5000);
+      }, 2000);
     } catch (e) {
       toast.error(e?.text);
     }
@@ -36,10 +40,10 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className="bg-gradient-to-b from-black via-gray-950 to-gray-900 shadow-2xl flex flex-col justify-center items-center p-5 md:p-10"
+      className="bg-gradient-to-b from-white via-slate-100 to-slate-200 shadow-2xl flex flex-col justify-center items-center p-5 md:p-10"
     >
-      <h1 className="text-2xl md:text-4xl text-pink-300 font-extrabold">Let's Connect</h1>
-      <p className="text-gray-300 text-center my-3 md:w-[550px]">
+      <h1 className="text-2xl md:text-4xl text-pink-500 font-extrabold">Let's Connect</h1>
+      <p className="text-gray-700 text-center my-3 md:w-[550px]">
         Have a project in mind or just want to say hello? I'm always open to
         meaningful conversations, collaborations, or new opportunities. Let's
         connect and build something great together!
@@ -47,7 +51,7 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={handleSubmit}
-        className="py-5 px-4 md:px-8 border-1 border-pink-300 rounded-2xl my-5 flex flex-col w-[300px] md:w-[500px] bg-black"
+        className="py-5 px-4 md:px-8 border-1 border-pink-500 rounded-2xl my-5 flex flex-col w-[300px] md:w-[500px] bg-white"
       >
         <input
           type="text"
@@ -57,7 +61,7 @@ const Contact = () => {
           onChange={(e) => {
             setName(e.target.value);
           }}
-          className="border-1 border-pink-300 px-4 py-2 my-3 rounded-2xl text-white bg-gradient-to-b from-gray-800 to-transparent"
+          className="border-1 border-pink-500 px-4 py-2 my-3 rounded-2xl text-gray-700 bg-slate-100"
         />
         <input
           type="text"
@@ -67,7 +71,7 @@ const Contact = () => {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
-          className="border-1 border-pink-300 px-4 py-2 my-3 rounded-2xl text-white bg-gradient-to-b from-gray-800 to-transparent"
+          className="border-1 border-pink-500 px-4 py-2 my-3 rounded-2xl text-gray-700 bg-slate-100"
         />
         <textarea
           rows="4"
@@ -78,11 +82,11 @@ const Contact = () => {
           onChange={(e) => {
             setMessage(e.target.value);
           }}
-          className="border-1 border-pink-300 px-4 py-2 my-3 rounded-2xl text-white bg-gradient-to-b from-gray-800 to-transparent"
+          className="border-1 border-pink-500 px-4 py-2 my-3 rounded-2xl text-gray-700 bg-slate-100"
         />
         <button
           type="submit"
-          className="text-xl font-bold text-pink-100 px-6 py-2 border-1 border-pink-300 my-4 rounded-full bg-gradient-to-b from-orange-950 to-transparent cursor-pointer"
+          className="text-xl font-bold text-pink-100 px-6 py-2 border-1 border-pink-500 my-4 rounded-full bg-gradient-to-b from-orange-950 to-orange-900 cursor-pointer"
         >
           Submit
         </button>
