@@ -44,7 +44,7 @@ const ProjectCard = ({
       </div>
       <div className="my-2 md:my-4 flex justify-between">
         <a href={demoLink} target="_blank" rel="noopener noreferrer">
-          <button className="px-4 py-2 w-[140px] md:w-[190px] lg:w-[250px] rounded-md border-1 border-black text-black font-medium cursor-pointer hover:shadow-md">
+          <button className="px-4 py-2 w-[140px] md:w-[190px] lg:w-[250px] rounded-md border-1 border-black text-black font-medium cursor-pointer hover:bg-gray-600 hover:text-white">
             Live Demo
           </button>
         </a>

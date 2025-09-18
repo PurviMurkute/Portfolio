@@ -46,6 +46,28 @@ const projectDetails = [
     demoLink: "https://gemini-clone-m12g.onrender.com",
     githubRepo: "https://github.com/PurviMurkute/Gemini-Clone",
   },
+  {
+    title: "QuickCart",
+    img: "/project3.png",
+    description: "Built a responsive e-commerce website using the MERN stack as a learning project. It allows users to browse products, add them to cart, and log in to place orders.",
+    features: [
+      "User Authentication",
+      "Product Catalog & Cart",
+      "Responsive Design",
+      "Order Workflow",
+      "Interactive UI using React.js and BootStrap"
+    ],
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "BootStrap",
+      "Bcrypt"
+    ],
+    demoLink: "https://quickcart-client.onrender.com",
+    githubRepo: "https://github.com/PurviMurkute/quickcart",
+  }
 ];
 
 export { projectDetails };

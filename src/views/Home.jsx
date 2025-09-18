@@ -46,7 +46,7 @@ const Home = () => {
             repeat={Infinity}
             className="text-2xl md:text-3xl text-black"
           />
-          <p className="text-gray-500 md:w-[450px] my-3 font-medium">
+          <p className="text-gray-500 md:w-[450px] my-4 text-sm md:text-md md:font-medium">
             Full Stack Developer driven by the challenge of building seamless,
             scalable web experiences. I enjoy turning ideas into reliable
             systems that not only work flawlessly but feel intuitive. From clean
@@ -101,11 +101,11 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <div className="my-5 md:mt-5">
+          <div className="my-5 md:mt-10">
             <img
               src={photo}
               alt="profile"
-              className="object-cover rounded-full h-[290px] w-[270px] md:h-[400px] md:w-[400px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
+              className="object-cover rounded-full h-[290px] w-[270px] md:h-[420px] md:w-[420px] bg-gradient-to-b from-blue-950 to-pink-950 overflow-hidden"
               style={{ boxShadow: "0px 0px 10px 1px #ff80bf" }}
             />
           </div>
