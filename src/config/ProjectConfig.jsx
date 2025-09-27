@@ -9,7 +9,7 @@ const projectDetails = [
       "Full CRUD operations for transaction management",
       "Interactive bar chart visualizations using chart.js",
       "Email notifications on SignUp using Nodemailer",
-      "Clean and responsive UI with Tailwind CSS"
+      "Clean and responsive UI with Tailwind CSS",
     ],
     techStack: [
       "React.js",
@@ -17,11 +17,45 @@ const projectDetails = [
       "MongoDB",
       "Express.js",
       "TailwindCSS",
-      "JWT",
-      "Passport.js"
+      "JsonWebToken",
+      "Bcrypt",
+      "Passport.js",
+      "passport-google-oauth20",
+      "Redis-caching",
+      "Nodemailer",
+      "pdfkit",
     ],
     demoLink: "https://expensetracker-client-bixd.onrender.com",
     githubRepo: "https://github.com/PurviMurkute/ExpenseTracker",
+  },
+  {
+    title: "DocVault",
+    img: "./project4.png",
+    description:
+      "DocVault is a cloud-based document management system where users can securely upload, store, and manage their important files including documents, images, and PDFs. Access your files anytime, anywhere from any device.",
+    features: [
+      "Secure authentication (email/password and Google Login with Passport.js)",
+      "Cloud-based document storage with ImageKit integration",
+      "Full CRUD operations for user documents with Redis caching",
+      "Starred documents for quick access and easy management",
+      "Fully responsive and modern UI built with Tailwind CSS",
+    ],
+
+    techStack: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "imagekit",
+      "TailwindCSS",
+      "JsonWebToken",
+      "Bcrypt",
+      "Passport.js",
+      "passport-google-oauth20",
+      "Redis-caching"
+    ],
+    demoLink: "https://docvault-dev.netlify.app",
+    githubRepo: "https://github.com/PurviMurkute/DocVault",
   },
   {
     title: "Askly",
@@ -33,7 +67,7 @@ const projectDetails = [
       "Google OAuth authentication",
       "User-specific chat history with MongoDB",
       "Responsive UI with Tailwind CSS",
-      "Full-stack MERN architecture"
+      "Full-stack MERN architecture",
     ],
     techStack: [
       "React.js",
@@ -49,13 +83,14 @@ const projectDetails = [
   {
     title: "QuickCart",
     img: "/project3.png",
-    description: "Built a responsive e-commerce website using the MERN stack as a learning project. It allows users to browse products, add them to cart, and log in to place orders.",
+    description:
+      "Built a responsive e-commerce website using the MERN stack as a learning project. It allows users to browse products, add them to cart, and log in to place orders.",
     features: [
       "User Authentication",
       "Product Catalog & Cart",
       "Responsive Design",
       "Order Workflow",
-      "Interactive UI using React.js and BootStrap"
+      "Interactive UI using React.js and BootStrap",
     ],
     techStack: [
       "React.js",
@@ -63,11 +98,11 @@ const projectDetails = [
       "Express",
       "MongoDB",
       "BootStrap",
-      "Bcrypt"
+      "Bcrypt",
     ],
     demoLink: "https://quickcart-client.onrender.com",
     githubRepo: "https://github.com/PurviMurkute/quickcart",
-  }
+  },
 ];
 
 export { projectDetails };

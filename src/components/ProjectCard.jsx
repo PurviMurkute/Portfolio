@@ -13,7 +13,7 @@ const ProjectCard = ({
       <img
         src={img}
         alt="pro-img"
-        className="rounded-2xl my-2 object-contain w-full h-[150px] md:h-[250px] block mx-auto"
+        className="rounded-md my-2 object-contain w-full h-[150px] md:h-[250px] block mx-auto shadow-sm"
       />
       <p className="text-gray-600 font-bold text-md md:text-lg">Project Details</p>
       <p className="text-gray-500 pt-2 text-[13px] md:text-sm">{description}</p>
@@ -35,7 +35,7 @@ const ProjectCard = ({
           return (
             <p
               key={i}
-              className="px-2 py-1 my-1 bg-pink-600 text-xs rounded-sm text-white"
+              className="px-2 py-1 my-1 bg-pink-300 text-xs rounded-sm text-gray-800 font-medium"
             >
               {tech}
             </p>
