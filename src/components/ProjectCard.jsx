@@ -8,7 +8,7 @@ const ProjectCard = ({
   githubRepo,
 }) => {
   return (
-    <div className="py-2 md:py-3 px-3 md:px-5 border-1 border-pink-500 bg-white shadow-xl w-[320px] md:w-[400px] lg:w-[570px] rounded-2xl my-2">
+    <div className="py-2 md:py-3 px-3 md:px-5 border-1 border-pink-300 bg-white shadow-xl w-full md:w-[400px] lg:w-[570px] rounded-xl my-2">
       <h3 className="text-gray-700 font-bold py-2 text-lg">{title}</h3>
       <img
         src={img}
@@ -35,7 +35,7 @@ const ProjectCard = ({
           return (
             <p
               key={i}
-              className="px-2 py-1 my-1 bg-pink-300 text-xs rounded-sm text-gray-800 font-medium"
+              className="px-2 py-1 my-1 border-1 border-pink-300 bg-pink-100 text-xs rounded-sm text-gray-800 font-medium"
             >
               {tech}
             </p>

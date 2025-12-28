@@ -18,7 +18,7 @@ import {
   SiVite,
   SiMysql,
 } from "react-icons/si";
-import { TbBrandCpp } from "react-icons/tb";
+import { TbBrandCpp, TbBrandReactNative } from "react-icons/tb";
 
 const TechStack = [
   {
@@ -32,6 +32,10 @@ const TechStack = [
   {
     icon: <FaReact />,
     title: "ReactJs",
+  },
+  {
+    icon: <TbBrandReactNative />,
+    title: "React Native",
   },
   {
     icon: <RiTailwindCssFill />,
@@ -87,16 +91,16 @@ const DataBase = [
 
 const Languages = [
   {
+    icon: <FaSquareJs />,
+    title: "JavaScript",
+  },
+  {
     icon: <TbBrandCpp />,
     title: "C++",
   },
   {
     icon: <FaPython />,
     title: "Python",
-  },
-  {
-    icon: <FaSquareJs />,
-    title: "JavaScript",
   },
 ];
 
